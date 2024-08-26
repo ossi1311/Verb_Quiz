@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verb Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="start-container">
+        <h1>Verb Quiz</h1>
+        <label for="question-count">Select number of questions:</label>
+        <select id="question-count">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+        </select>
+        <button id="start-btn">Start Quiz</button>
+    </div>
+    <div id="question-container" style="display:none;">
+        <h2 id="round"></h2>
+        <p id="question"></p>
+        <input type="text" id="answer" placeholder="Your answer">
+        <button id="submit-btn">Submit</button>
+        <button id="next-btn" style="display:none;">Next Question</button>
+        <p id="feedback"></p>
+    </div>
+    <div id="completion" style="display:none;">
+        <p id="completion-text"></p>
+        <button id="restart-btn">Restart Quiz</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
