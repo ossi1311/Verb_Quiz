@@ -1,36 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
     const flashcards = [
-           ["arise", "arose", "arisen"],
-    ["be", "was/were", "been"],
-    ["beat", "beat", "beaten"],
-    ["become", "became", "become"],
-    ["begin", "began", "begun"],
-    ["bend", "bent", "bent"],
-    ["bet", "bet", "bet"],
-    ["bite", "bit", "bitten"],
-    ["blow", "blew", "blown"],
-    ["break", "broke", "broken"],
-    ["breed", "bred", "bred"],
-    ["bring", "brought", "brought"],
-    ["broadcast", "broadcast", "broadcast"],
-    ["build", "built", "built"],
-    ["burn", "burnt", "burnt"],
-    ["buy", "bought", "bought"],
-    ["catch", "caught", "caught"],
-    ["choose", "chose", "chosen"],
-    ["come", "came", "come"],
-    ["cost", "cost", "cost"],
-    ["cut", "cut", "cut"],
-    ["deal", "dealt", "dealt"],
-    ["dig", "dug", "dug"],
-    ["do", "did", "done"],
-    ["draw", "drew", "drawn"],
-    ["dream", "dreamt", "dreamt"],
-    ["drink", "drank", "drunk"],
-    ["drive", "drove", "driven"],
-    ["eat", "ate", "eaten"],
-    ["fall", "fell", "fallen"],
-        // Add more flashcards as needed
+        ["ruokkia", "feed", "fed", "fed"],
+        ["tuntea, tuntea itsensä/olonsa joksikin", "feel", "felt", "felt"],
+        ["taistella, tapella", "fight", "fought", "fought"],
+        ["löytää", "find", "found", "found"],
+        ["paeta", "flee", "fled", "fled"],
+        ["lentää", "fly", "flew", "flown"],
+        ["unohtaa", "forget", "forgot", "forgotten"],
+        ["antaa anteeksi", "forgive", "forgave", "forgiven"],
+        ["jäätyä", "freeze", "froze", "frozen"],
+        ["saada, hakea, päästä, tulla joksikin", "get", "got", "got/gotten"],
+        ["antaa", "give", "gave", "given"],
+        ["mennä", "go", "went", "gone"],
+        ["kasvaa, viljellä", "grow", "grew", "grown"],
+        ["riippua, ripustaa, roikkua", "hang", "hung", "hung"],
+        ["olla (jollakulla), omistaa", "have", "had", "had"],
+        ["kuulla", "hear", "heard", "heard"],
+        ["piilottaa, piiloutua", "hide", "hid", "hidden"],
+        ["lyödä, osua", "hit", "hit", "hit"],
+        ["pitää (kiinni), pidellä", "hold", "held", "held"],
+        ["satuttaa, loukata, sattua", "hurt", "hurt", "hurt"],
+        ["pitää, säilyttää", "keep", "kept", "kept"],
+        ["tietää, tuntea", "know", "knew", "known"],
+        ["panna, asettaa", "lay", "laid", "laid"],
+        ["johtaa", "lead", "led", "led"],
+        ["oppia", "learn", "learnt", "learnt"],
+        ["lähteä, jättää", "leave", "left", "left"],
+        ["lainata jollekin", "lend", "lent", "lent"],
+        ["antaa, sallia", "let", "let", "let"],
+        ["maata, olla", "lie", "lay", "lain"],
+        ["sytyttää", "light", "lit", "lit"]
     ];
 
     let currentQuestionIndex = 0;
@@ -77,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             completionTextElement.textContent = `You got ${correctAnswers} out of ${totalQuestions} correct.`;
         } else {
             const currentFlashcard = flashcards[currentQuestionIndex];
-            questionElement.textContent = `What are the past simple and past participle forms of '${currentFlashcard[0]}'?`;
+            questionElement.textContent = `${currentFlashcard[0]}?`;
             answerInput.value = '';
             feedbackElement.textContent = '';
             nextButton.style.display = 'none';
@@ -90,13 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkAnswer() {
         const currentFlashcard = flashcards[currentQuestionIndex];
         const userAnswer = answerInput.value.trim().toLowerCase();
-        const correctAnswer = `${currentFlashcard[1].toLowerCase()} ${currentFlashcard[2].toLowerCase()}`;
+        const correctAnswer = `${currentFlashcard[1].toLowerCase()}, ${currentFlashcard[2].toLowerCase()}, ${currentFlashcard[3].toLowerCase()}`;
 
         if (userAnswer === correctAnswer) {
             feedbackElement.textContent = 'Correct!';
             correctAnswers++;
         } else {
-            feedbackElement.textContent = `Incorrect. The correct answer is '${currentFlashcard[1]} ${currentFlashcard[2]}'.`;
+            feedbackElement.textContent = `Incorrect. The correct answer is '${currentFlashcard[1]}, ${currentFlashcard[2]}, ${currentFlashcard[3]}'.`;
         }
 
         submitButton.style.display = 'none';
