@@ -1,28 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
- const flashcards = [
-    ["tavata, kirjoittaa", "spell spelt spelt"],
-    ["vietta, kuluttaa", "spend spent spent"],
-    ["pilata", "spoil spoilt spoilt"],
-    ["levita, levittää", "spread spread spread"],
-    ["seisoa", "stand stood stood"],
-    ["varastaa", "steal stole stolen"],
-    ["pistää, kiinnittää", "stick stuck stuck"],
-    ["pistää (hyönteinen)", "sting stung stung"],
-    ["vannoa, kirota", "swear swore sworn"],
-    ["uida", "swim swam swum"],
-    ["ottaa, viedä", "take took taken"],
-    ["kestää", "teach taught taught"],
-    ["opettaa", "tell told told"],
-    ["kertoa, käskeä", "think thought thought"],
-    ["ajatella, olla jotakin mieltä, luulla", "throw threw thrown"],
-    ["heittää", "understand understood understood"],
-    ["ymmärtää", "wake woke woken"],
-    ["herätä, herättää", "wear wore worn"],
-    ["pitaä yllään, käyttää", "win won won"],
-    ["voittaa", "write wrote written"],
-    ["kirjoittaa", "write wrote written"]
-];
-
+    const flashcards = [
+        ["tavata, kirjoittaa", "spell spelt spelt"],
+        ["vietta, kuluttaa", "spend spent spent"],
+        ["pilata", "spoil spoilt spoilt"],
+        ["levita, levittää", "spread spread spread"],
+        ["seisoa", "stand stood stood"],
+        ["varastaa", "steal stole stolen"],
+        ["pistää, kiinnittää", "stick stuck stuck"],
+        ["pistää (hyönteinen)", "sting stung stung"],
+        ["vannoa, kirota", "swear swore sworn"],
+        ["uida", "swim swam swum"],
+        ["ottaa, viedä", "take took taken"],
+        ["kestää", "teach taught taught"],
+        ["opettaa", "tell told told"],
+        ["kertoa, käskeä", "think thought thought"],
+        ["ajatella, olla jotakin mieltä, luulla", "throw threw thrown"],
+        ["heittää", "understand understood understood"],
+        ["ymmärtää", "wake woke woken"],
+        ["herätä, herättää", "wear wore worn"],
+        ["pitaä yllään, käyttää", "win won won"],
+        ["voittaa", "write wrote written"],
+        ["kirjoittaa", "write wrote written"]
+    ];
 
     let currentQuestionIndex = 0;
     let totalQuestions = 0;
@@ -48,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     restartButton.addEventListener('click', restartQuiz);
 
     function startQuiz() {
+        console.log('Start button clicked');
         currentQuestionIndex = 0;
         correctAnswers = 0;
         totalQuestions = parseInt(questionCountElement.value);
