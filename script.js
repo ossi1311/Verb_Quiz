@@ -11,16 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
         ["vannoa, kirota", "swear swore sworn"],
         ["uida", "swim swam swum"],
         ["ottaa, viedä", "take took taken"],
-        ["kestää", "teach taught taught"],
-        ["opettaa", "tell told told"],
-        ["kertoa, käskeä", "think thought thought"],
-        ["ajatella, olla jotakin mieltä, luulla", "throw threw thrown"],
-        ["heittää", "understand understood understood"],
-        ["ymmärtää", "wake woke woken"],
-        ["herätä, herättää", "wear wore worn"],
-        ["pitaä yllään, käyttää", "win won won"],
-        ["voittaa", "write wrote written"],
-        ["kirjoittaa", "write wrote written"]
+        ["opettaa", "teach taught taught"],
+        ["kertoa, käskeä", "tell told told"],
+        ["ajateööa, olla jotakin mieltä, luulla", "think thought thought"],
+        ["heittää", "throw threw thrown"],
+        ["ymmärtää", "understand understood understood"],
+        ["herätä, herättää", "wake woke woken"],
+        ["pitää yllään, käyttää", "wear wore worn"],
+        ["voittaa", "win won won"],
+        ["kirjoittaa", "write wrote written"],
     ];
 
     let currentQuestionIndex = 0;
