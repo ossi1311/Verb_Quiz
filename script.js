@@ -1,34 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     const flashcards = [
-        ["menettää, kadottaa, hävitä", "lose", "lost", "lost"],
-["tehdä, valmistaa", "make", "made", "made"],
-["tarkoittaa", "mean", "meant", "meant"],
-["tavata", "meet", "met", "met"],
-["voittaa, päästä yli", "overcome", "overcame", "overcome"],
-["maksaa", "pay", "paid", "paid"],
-["panna, asettaa", "put", "put", "put"],
-["lopettaa", "quit", "quit", "quit"],
-["lukea", "read", "read", "read"],
-["ajaa (polkupyörällä), ratsastaa", "ride", "rode", "ridden"],
-["soida, soittaa", "ring", "rang", "rung"],
-["nousta", "rise", "rose", "risen"],
-["juosta", "run", "ran", "run"],
-["sanoa", "say", "said", "said"],
-["nähdä", "see", "saw", "seen"],
-["myydä", "sell", "sold", "sold"],
-["lähettää", "send", "sent", "sent"],
-["asettaa", "set", "set", "set"],
-["ravistaa, vapista", "shake", "shook", "shaken"],
-["paistaa, loistaa", "shine", "shone", "shone"],
-["ampua, kuvata", "shoot", "shot", "shot"],
-["näyttää, osoittaa", "show", "showed", "shown"],
-["sulkea", "shut", "shut", "shut"],
-["laulaa", "sing", "sang", "sung"],
-["upota", "sink", "sank", "sunk"],
-["istua", "sit", "sat", "sat"],
-["nukkua", "sleep", "slept", "slept"],
-["haistaa, haista", "smell", "smelt", "smelt"],
-["puhua", "speak", "spoke", "spoken"],
+["tavata, kirjoittaa", "spell spelt spelt *"]  
+["vietta, kuluttaa", "spend spent spent"]  
+["pilata", "spoil spoilt spoilt •"]  
+["levita, levittää", "spread spread spread"]  
+["seisoa", "stand stood stood"]  
+["varastaa", "steal stole stolen"]  
+["pistää, kiinnittää", "stick stuck stuck"]  
+["pistää (hyönteinen)", "sting stung stung"]  
+["vannoa, kirota", "swear swore sworn"]  
+["uida", "swim swam swum"]  
+["ottaa, viedä", "take took taken"]  
+["kestää", "teach taught taught"]  
+["opettaa", "tell told told"]  
+["kertoa, käskeä", "think thought thought"]  
+["ajatella, olla jotakin mieltä, luulla", "throw threw thrown"]  
+["heittää", "understand understood understood"]  
+["ymmärtää", "wake woke woken"]  
+["herätä, herättää", "wear wore worn"]  
+["pitaä yllään, käyttää", "win won won"]  
+["voittaa", "write wrote written"]  
+["kirjoittaa", "write wrote written"]
     ];
 
     let currentQuestionIndex = 0;
