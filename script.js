@@ -24,13 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     let currentQuestionIndex = 0;
-    let totalQuestions = 0;
     let correctAnswers = 0;
 
     const startContainer = document.getElementById('start-container');
     const questionContainer = document.getElementById('question-container');
     const completionContainer = document.getElementById('completion');
-    const questionCountElement = document.getElementById('question-count');
     const questionElement = document.getElementById('question');
     const answerInput = document.getElementById('answer');
     const feedbackElement = document.getElementById('feedback');
@@ -50,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Start button clicked');
         currentQuestionIndex = 0;
         correctAnswers = 0;
-        totalQuestions = parseInt(questionCountElement.value);
 
         shuffle(flashcards);
 
@@ -62,10 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function loadNextQuestion() {
-        if (currentQuestionIndex >= totalQuestions || currentQuestionIndex >= flashcards.length) {
+        if (currentQuestionIndex >= flashcards.length) {
             questionContainer.style.display = 'none';
             completionContainer.style.display = 'block';
-            completionTextElement.textContent = `You got ${correctAnswers} out of ${totalQuestions} correct.`;
+            completionTextElement.textContent = `You got ${correctAnswers} out of ${flashcards.length} correct.`;
         } else {
             const currentFlashcard = flashcards[currentQuestionIndex];
             questionElement.textContent = `${currentFlashcard[0]}?`;
@@ -81,13 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkAnswer() {
         const currentFlashcard = flashcards[currentQuestionIndex];
         const userAnswer = answerInput.value.trim().toLowerCase();
-        const correctAnswer = `${currentFlashcard[1].toLowerCase()}, ${currentFlashcard[2].toLowerCase()}, ${currentFlashcard[3].toLowerCase()}`;
+        const correctAnswer = `${currentFlashcard[1].toLowerCase()}`;
 
         if (userAnswer === correctAnswer) {
             feedbackElement.textContent = 'Correct!';
             correctAnswers++;
         } else {
-            feedbackElement.textContent = `Incorrect. The correct answer is '${currentFlashcard[1]}, ${currentFlashcard[2]}, ${currentFlashcard[3]}'.`;
+            feedbackElement.textContent = `Incorrect. The correct answer is '${currentFlashcard[1]}'.`;
         }
 
         submitButton.style.display = 'none';
